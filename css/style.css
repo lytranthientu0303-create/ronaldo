@@ -1,0 +1,259 @@
+/* thẻ sử dụng flex gọi là thẻ cha (flex container) 
+      - thẻ nằm trong là thẻ con (flex item)*/
+
+:root {
+  --black-color: #272727;
+  --black-color2: #1d252c;
+  --black-color3: #0b254b;
+  --black-color4: #1d293f;
+  --gray-color1: #849abe;
+  --green-color: #56b280;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header,
+.header-center,
+.header-center a:first-child,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.header {
+  justify-content: space-between;
+  /* margin: 20px auto; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 12px 100px;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.header-left .header-left-img {
+  width: 126px;
+  height: 34px;
+  object-fit: cover;
+}
+.header-center a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+.header-center {
+  gap: 150px;
+  /* gap: tạo khoảng cách */
+}
+.header-right-icon {
+  font-size: 24px;
+  margin-left: 6px;
+}
+
+/* banner */
+.banner {
+  margin-top: 61px;
+  background-image: url("../img/bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-box {
+  background-color: white;
+  opacity: 80%;
+  border-radius: 2px;
+  width: 730px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: Thuộc tính này cho phép bạn kiểm soát cách các flex items xử lý khi chúng không thể vừa trên một hàng duy nhất.
+
+nowrap (giá trị mặc định): Tất cả các flex items sẽ cố gắng nằm trên một hàng, gây ra hiện tượng tràn.
+
+wrap: Các flex items sẽ tự động xuống hàng mới khi chúng không đủ chỗ.
+
+wrap-reverse: Tương tự như wrap, nhưng các hàng mới sẽ được xếp từ dưới lên trên.
+
+flex-flow: Đây là thuộc tính viết tắt (shorthand) cho flex-direction và flex-wrap. Mặc dù flex-flow có thể được sử dụng để thiết lập flex-wrap, nhưng flex-wrap mới là thuộc tính trực tiếp giải quyết vấn đề tràn hàng.
+
+gap: Thuộc tính này tạo khoảng cách giữa các flex items, không giải quyết vấn đề tràn.
+
+flex: Đây là thuộc tính viết tắt (shorthand) cho flex-grow, flex-shrink, và flex-basis, dùng để kiểm soát kích thước của từng item, không phải để xuống hàng. */
+}
+
+.banner-box .banner-box-title {
+  color: var(--black-color2);
+  font-size: 40px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.banner-box .banner-box-desc {
+  color: var(--black-color2);
+  width: 450px;
+}
+.banner-box .banner-box-btn {
+  background-color: var(--green-color);
+  color: white;
+  padding: 4px 6px;
+  cursor: pointer;
+  border: none;
+  font-size: 21px;
+}
+.heading-title {
+  color: var(--black-color3);
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 32px;
+}
+.heading-desc {
+  color: #5e6e89;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*4 cột, 1fr: các phần tử bằng nhau  */
+  gap: 30px;
+}
+.product-item {
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 16px;
+  border-radius: 8px;
+}
+.product-item img {
+  width: 100%;
+}
+.product-name {
+  color: var(--black-color4);
+  margin: 8px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+.product-desc {
+  color: var(--gray-color1);
+  margin: 12px;
+  margin-bottom: 8px;
+}
+.product-sell {
+  display: flax;
+  justify-content: space-between;
+  color: var(--green-color);
+  margin: 8px 0;
+}
+.product-price {
+  font-size: 20px;
+  font-weight: 500;
+}
+.product-sold {
+  font-size: 12px;
+  font-weight: 500;
+}
+.product-btn {
+  color: white;
+  background-color: var(--green-color);
+  width: 100%;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.header-right-info {
+  position: relative;
+}
+.header-right-list {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: none;
+}
+.header-right-list li,
+.header-right {
+  cursor: pointer;
+}
+.header-right-list li:first-child {
+  margin-bottom: 15px;
+}
+.header-right-list li:hover {
+  color: #56b280;
+}
+.header-right-info:hover .header-right-list {
+  display: block;
+}
+
+.header-right-info::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 100px;
+  height: 20px;
+  background-color: transparent;
+  z-index: 2;
+}
+/* responsive: Code độ phan giải cho mọi thiết bị */
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 12px 30px;
+  }
+  .header-center {
+    gap: 30px;
+    /* gap: tạo khoảng cách */
+  }
+}
+@media screen and (max-width: 640px) {
+  .header-center {
+    display: none;
+  }
+  .header-right-info {
+    position: static;
+  }
+  .header-right-list {
+    /* display: block; */
+    /* vw = view width */
+    width: 100vw;
+    height: 50vh;
+    top: 60px;
+  }
+  .banner {
+    height: 350px;
+  }
+  .banner-box {
+    width: 400px;
+  }
+  .banner-box .banner-box-title {
+    font-size: 25px;
+  }
+  .banner-box .banner-box-desc {
+    width: 326px;
+  }
+  .product-container {
+    display: block;
+  }
+  .heading-desc {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 475px) {
+}

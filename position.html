@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+      .boxl {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        /* poisition - absolute */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- position(vị trí): kiến thức liên quan đến vị trí, vị trí của các phần tử -->
+    <!-- vị trí mặc định là static(đứng yên): không sử dụng được top right bottom left -->
+    <!-- 
+     4. vị trí hay sử dụng:
+     + fixed
+     + relative
+     + absolute
+     + sticky
+     -->
+    <!--
+     relative: giống với static nhưng sử dụng được top right bottom left
+     absolute: dựa vào vị trí của thẻ cha(nếu không có sẽ dựa vào body) 
+      -->
+    <div class="box"></div>
+  </body>
+</html>
